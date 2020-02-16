@@ -1,4 +1,5 @@
 $text-color-black: #333;
+$text-color-red: #F83D40;
 $bg-color: #F8F9FA;
 
 *{
@@ -163,6 +164,114 @@ img {
             &:hover span{
                 color:#BF0413
             }
+        }
+    }
+}
+// 頁尾
+footer {
+    background-color: $text-color-black;
+    text-align: center;
+    padding: 50px 0;
+
+    img {
+        width: 100px;
+        transform: scaleX(-1);
+    }
+
+    p {
+        font-size: 10px;
+        padding: 20px 0;
+    }
+}
+
+// 菜單
+#menu {
+    display: none;
+    position: fixed;
+    right: 0;
+    top: 0;
+    padding: 10px;
+    cursor: pointer;
+
+    a.current {
+        background-color: $text-color-red;
+        display: inline-block;
+        width: 100%;
+        padding: 10px 20px;
+        border-radius: 30px;
+        text-align: center;
+        color: #fff !important;
+    }
+
+    img {
+        filter: invert(1);
+    }
+
+    // 啟動：點選元素時
+    &:active #menu-box{
+        right: 0;
+    }
+    &:hover #menu-box{
+        right: 0;
+    }
+
+    #menu-box {
+        position: absolute;
+        right: -500px;
+        top: 0;
+        width: 500px;
+        height: 100vh;
+        background-color: #fff;
+        transition: 0.5s;
+
+        ul {
+            list-style: none;
+            li {
+                padding: 30px;
+
+                a {
+                    color: $text-color-black;
+                    text-decoration: none;
+                    font-size: 36px;
+                }
+            }
+        }
+    }
+}
+
+//phone
+@media screen and (max-width: 768px) {
+    nav{
+        grid-template-columns: auto;
+    }
+}
+
+//pad
+@media screen and (min-width: 769px) {
+    nav{
+        grid-template-columns: auto;
+
+        ul{
+            display: none;
+        }
+    }
+    #menu {
+        display: block;
+        position: fixed;
+        right: 0;
+        top: 0;
+        padding: 10px;
+        filter: invert(1);
+        cursor: pointer;
+}
+}
+
+@media screen and (min-width: 1025px) {
+    nav{
+        grid-template-columns: repeat(3 auto);
+
+        ul{
+            display: block;
         }
     }
 }
