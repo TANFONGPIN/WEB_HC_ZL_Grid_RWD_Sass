@@ -14,6 +14,7 @@ color:#fff
     height: 100vh;
     background-image: url(./img/galaxy.jpg);
     background-size: cover;
+    background-attachment: fixed;
     margin-top: -100px;
     // 使用格線
     display: grid;
@@ -70,8 +71,8 @@ img {
     transition: 0.5s;
     transform: scaleX(-1);
 
-    &:hover{
-        transform: scaleX(-1.2) scaleY(-1.2);
+    &:hover {
+        transform: scaleX(-1.2) scaleY(1.2);
     }
 }
 }
@@ -138,6 +139,12 @@ img {
         color: $text-color-black;
     }
 
+    h1 {
+        font-size: 72px;
+        text-align: center;
+        padding: 30px 0 10px;
+    }
+
     div {
         max-width: 1200px;
         margin: 0 auto;
@@ -150,13 +157,16 @@ img {
             text-align: center;
 
             img {
-                display: block;
+                display: inline-block;
                 width: 64px;
+                transition: 0.3s;
+                filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(0) brightness(0%) contrast(100%);
             }
             span {
                 display: block;
                 padding: 10px 0;
                 font-size: 12px;
+                transition: 0.3s;
             }
             &:hover img{
                 filter: invert(16%) sepia(37%) saturate(5263%) hue-rotate(339deg) brightness(108%) contrast(124%);
