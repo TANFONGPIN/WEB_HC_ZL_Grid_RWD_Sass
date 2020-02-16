@@ -157,6 +157,12 @@ img {
                 padding: 10px 0;
                 font-size: 12px;
             }
+            &:hover img{
+                filter: invert(16%) sepia(37%) saturate(5263%) hue-rotate(339deg) brightness(108%) contrast(124%);
+            }
+            &:hover span{
+                color:#BF0413
+            }
         }
     }
 }

@@ -181,4 +181,13 @@ nav img:hover {
   padding: 10px 0;
   font-size: 12px;
 }
+
+#icon div div:hover img {
+  -webkit-filter: invert(16%) sepia(37%) saturate(5263%) hue-rotate(339deg) brightness(108%) contrast(124%);
+          filter: invert(16%) sepia(37%) saturate(5263%) hue-rotate(339deg) brightness(108%) contrast(124%);
+}
+
+#icon div div:hover span {
+  color: #BF0413;
+}
 /*# sourceMappingURL=style.css.map */
