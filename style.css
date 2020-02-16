@@ -291,14 +291,33 @@ footer p {
     position: fixed;
     right: 0;
     top: 0;
-    padding: 5px;
+    padding: 0px;
     -webkit-filter: invert(1);
             filter: invert(1);
     cursor: pointer;
   }
+  #content-1, #content-2, #content-3 {
+        grid-template-areas: "text-area" "pic";
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  #content-1 .pic, #content-2 .pic, #content-3 .pic {
+    text-align: center;
+  }
+  #content-1 .pic img, #content-2 .pic img, #content-3 .pic img {
+    width: 200px;
+  }
+  #content-1 .text-area, #content-2 .text-area, #content-3 .text-area {
+    padding: 0 0px;
+  }
+  #icon div {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    padding: 0px;
+  }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   nav {
     -ms-grid-columns: auto;
         grid-template-columns: auto;

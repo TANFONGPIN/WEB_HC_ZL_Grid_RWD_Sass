@@ -263,14 +263,36 @@ footer {
         position: fixed;
         right: 0;
         top: 0;
-        padding: 5px;
+        padding: 0px;
         filter:invert(1);
         cursor: pointer;
+    }
+    #content-1, #content-2, #content-3 {
+        grid-template-areas: "text-area" "pic";
+        grid-template-columns: 1fr;
+        
+        .pic{
+            text-align: center;
+            img{
+                width: 200px;
+            }
+        }
+
+        .text-area{
+            padding: 0 0px;
+        }
+    }
+
+    #icon {
+        div {
+            grid-template-columns: repeat(2, 1fr);
+            padding: 0px;
+        }
     }
 }
 
 //pad
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
     nav{
         grid-template-columns: auto;
 
